@@ -13,7 +13,7 @@ type Object struct {
 	Data  []byte
 }
 
-func Add(store KVStore, node Node, h hash.Hash) []byte {
+func Add(store KVStore, node Node, hp HashPool) []byte {
 	// TODO 将分片写入到KVStore中，并返回Merkle Root
 	switch node.Type() {
 	case FILE:
